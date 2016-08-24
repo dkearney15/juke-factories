@@ -29,6 +29,7 @@ router.param('albumId', function (req, res, next, id) {
 });
 
 router.get('/:albumId', function (req, res) {
+  console.log('hello')
   res.json(req.album);
 });
 
