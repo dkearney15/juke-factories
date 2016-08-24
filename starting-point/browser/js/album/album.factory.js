@@ -23,14 +23,13 @@ juke.factory('albumFactory', function($http){
   var output = {};
   
   output.fetchAll = function(){
-    $http.get('/api/albums/')
+    return $http.get('/api/albums/')
       .then(function (res) { return res.data; })
   };
 
   output.fetchById = function(id){
-    $http.get('/api/albums/' + id)
+    return $http.get('/api/albums/' + id)
       .then(function (res) { 
-        console.log(res)
         return res.data; })
   };  
   return output;
